@@ -1,0 +1,9 @@
+pipeline {
+    agent any
+    stage('git') {
+       git 'https://github.com/kaledarajasekhar/sample.git'
+    }
+      stage('build-with-maven') {
+       git 'sh mvn clean package'
+    }
+}
